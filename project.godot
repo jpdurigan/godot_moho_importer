@@ -1,0 +1,120 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "IKBakeHelper",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/ik_bake_plugin/IkBakeHelper.gd"
+}, {
+"base": "Reference",
+"class": "MohoBone",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoBone.gd"
+}, {
+"base": "Reference",
+"class": "MohoGroup",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoGroup.gd"
+}, {
+"base": "Reference",
+"class": "MohoGroupMaskHelper",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/MohoGroupMaskHelper.gd"
+}, {
+"base": "Reference",
+"class": "MohoProjectHelper",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/MohoProjectHelper.gd"
+}, {
+"base": "Reference",
+"class": "MohoRigElement",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoRigElement.gd"
+}, {
+"base": "Reference",
+"class": "MohoSkeleton",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoSkeleton.gd"
+}, {
+"base": "Reference",
+"class": "MohoSprite",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoSprite.gd"
+}, {
+"base": "Reference",
+"class": "MohoSwitch",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/resources/MohoSwitch.gd"
+}, {
+"base": "Reference",
+"class": "Skeleton2DIK",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIK.gd"
+}, {
+"base": "Reference",
+"class": "Skeleton2DIKChain",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIKChain.gd"
+}, {
+"base": "Reference",
+"class": "Skeleton2DIKChainPoint",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIKChainPoint.gd"
+}, {
+"base": "Reference",
+"class": "SmartBone",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/smart_bones/SmartBone.gd"
+}, {
+"base": "Reference",
+"class": "SmartBoneAction",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/smart_bones/SmartBoneAction.gd"
+}, {
+"base": "Reference",
+"class": "SwitchLayer",
+"language": "GDScript",
+"path": "res://addons/jpd.moho_importer/classes/SwitchLayer.gd"
+} ]
+_global_script_class_icons={
+"IKBakeHelper": "",
+"MohoBone": "",
+"MohoGroup": "",
+"MohoGroupMaskHelper": "",
+"MohoProjectHelper": "",
+"MohoRigElement": "",
+"MohoSkeleton": "",
+"MohoSprite": "",
+"MohoSwitch": "",
+"Skeleton2DIK": "",
+"Skeleton2DIKChain": "",
+"Skeleton2DIKChainPoint": "",
+"SmartBone": "",
+"SmartBoneAction": "",
+"SwitchLayer": ""
+}
+
+[application]
+
+config/name="moho_importer_plugin"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/jpd.moho_importer/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

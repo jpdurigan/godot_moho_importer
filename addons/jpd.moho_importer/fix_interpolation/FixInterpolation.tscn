@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/jpd.moho_importer/components/moho_inspector_plugin_theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/jpd.moho_importer/fix_interpolation/FixInterpolation.gd" type="Script" id=2]
+
+[node name="FixInterpolation" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Content" type="VBoxContainer" parent="."]
+margin_left = 6.0
+margin_top = 8.0
+margin_right = 890.0
+margin_bottom = 504.0
+
+[node name="Animations" type="HBoxContainer" parent="Content"]
+margin_right = 884.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="Content/Animations"]
+margin_right = 440.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "Animations"
+
+[node name="List" type="VBoxContainer" parent="Content/Animations"]
+margin_left = 444.0
+margin_right = 884.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+
+[node name="CheckBox" type="CheckBox" parent="Content/Animations/List"]
+margin_right = 440.0
+margin_bottom = 24.0
+text = "anim 1"
+
+[node name="CheckBox2" type="CheckBox" parent="Content/Animations/List"]
+margin_top = 28.0
+margin_right = 440.0
+margin_bottom = 52.0
+text = "anim 2"
+
+[node name="CheckBox3" type="CheckBox" parent="Content/Animations/List"]
+margin_top = 56.0
+margin_right = 440.0
+margin_bottom = 80.0
+text = "anim 3"
+
+[node name="HSeparator" type="HSeparator" parent="Content"]
+visible = false
+margin_top = 84.0
+margin_right = 884.0
+margin_bottom = 88.0
+
+[node name="Parameters" type="HBoxContainer" parent="Content"]
+visible = false
+margin_top = 92.0
+margin_right = 884.0
+margin_bottom = 116.0
+
+[node name="Label" type="Label" parent="Content/Parameters"]
+margin_right = 440.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "Parameters"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="List" type="VBoxContainer" parent="Content/Parameters"]
+margin_left = 444.0
+margin_right = 884.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Bezier" type="CheckBox" parent="Content/Parameters/List"]
+margin_right = 440.0
+margin_bottom = 24.0
+hint_tooltip = "Standardize to Bézier if conflict between"
+text = "Use Bézier tracks"
+
+[node name="HSeparator2" type="HSeparator" parent="Content"]
+margin_top = 84.0
+margin_right = 884.0
+margin_bottom = 88.0
+
+[node name="Fix" type="Button" parent="Content"]
+margin_top = 92.0
+margin_right = 884.0
+margin_bottom = 112.0
+hint_tooltip = "Standardize  selected animations to bézier tracks. Meant to be used if problems occur when  interpolating between Moho's animations."
+text = "Fix interpolation"
+
+[connection signal="pressed" from="Content/Fix" to="." method="_on_Fix_pressed"]

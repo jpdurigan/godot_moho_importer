@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/jpd.moho_importer/ik_bake_plugin/IkBakePlugin.gd" type="Script" id=1]
+[ext_resource path="res://addons/jpd.moho_importer/components/moho_inspector_plugin_theme.tres" type="Theme" id=2]
+
+[node name="IkBakePlugin" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Options" type="VBoxContainer" parent="."]
+margin_left = 6.0
+margin_top = 8.0
+margin_right = 1786.0
+margin_bottom = 1016.0
+
+[node name="LaunchHelper" type="Button" parent="Options"]
+margin_right = 1780.0
+margin_bottom = 20.0
+text = "Launch Helper"
+
+[node name="Animation" type="HBoxContainer" parent="Options"]
+margin_top = 24.0
+margin_right = 1780.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="Options/Animation"]
+margin_top = 3.0
+margin_right = 888.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Animation"
+
+[node name="Options" type="OptionButton" parent="Options/Animation"]
+margin_left = 892.0
+margin_right = 1780.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+disabled = true
+clip_text = true
+
+[node name="Bake" type="VBoxContainer" parent="Options"]
+margin_top = 48.0
+margin_right = 1780.0
+margin_bottom = 176.0
+
+[node name="Separator1" type="HSeparator" parent="Options/Bake"]
+margin_right = 1780.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="ForceLoop" type="HBoxContainer" parent="Options/Bake"]
+margin_top = 12.0
+margin_right = 1780.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Options/Bake/ForceLoop"]
+margin_top = 5.0
+margin_right = 1752.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Force loop"
+
+[node name="CheckBox" type="CheckBox" parent="Options/Bake/ForceLoop"]
+margin_left = 1756.0
+margin_right = 1780.0
+margin_bottom = 24.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="SimpleInterval" type="HBoxContainer" parent="Options/Bake"]
+margin_top = 40.0
+margin_right = 1780.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Options/Bake/SimpleInterval"]
+margin_top = 5.0
+margin_right = 888.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Interval"
+
+[node name="SpinBox" type="SpinBox" parent="Options/Bake/SimpleInterval"]
+margin_left = 892.0
+margin_right = 1780.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+min_value = 0.001
+max_value = 1.0
+step = 0.001
+value = 0.001
+allow_greater = true
+
+[node name="Separator2" type="HSeparator" parent="Options/Bake"]
+margin_top = 68.0
+margin_right = 1780.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Options/Bake"]
+margin_top = 80.0
+margin_right = 1780.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 24 )
+
+[node name="Button" type="Button" parent="Options/Bake"]
+margin_top = 108.0
+margin_right = 1780.0
+margin_bottom = 128.0
+disabled = true
+toggle_mode = true
+text = "Bake"
+
+[connection signal="pressed" from="Options/LaunchHelper" to="." method="_on_LaunchHelper_pressed"]
+[connection signal="item_selected" from="Options/Animation/Options" to="." method="_on_Options_item_selected"]
+[connection signal="toggled" from="Options/Bake/ForceLoop/CheckBox" to="." method="_on_ForceLoop_CheckBox_toggled"]
+[connection signal="value_changed" from="Options/Bake/SimpleInterval/SpinBox" to="." method="_on_simple_interval_SpinBox_value_changed"]
+[connection signal="toggled" from="Options/Bake/Button" to="." method="_on_Bake_toggled"]

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="icon_smart_bone.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="27.520568"
+     inkscape:cx="13.099294"
+     inkscape:cy="9.2112926"
+     inkscape:window-width="1680"
+     inkscape:window-height="913"
+     inkscape:window-x="0"
+     inkscape:window-y="722"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <path
+     d="m10.478 1037.4a2.4664 2.4663 0 0 0 -1.7804.7205 2.4664 2.4663 0 0 0 -.31408 3.1041l-3.559 3.5608a2.4664 2.4663 0 0 0 -3.1023.3121 2.4664 2.4663 0 0 0 0 3.4876 2.4664 2.4663 0 0 0 1.397.6955 2.4664 2.4663 0 0 0 .69561 1.397 2.4664 2.4663 0 0 0 3.4877 0 2.4664 2.4663 0 0 0 .31408-3.1041l3.5609-3.5608a2.4664 2.4663 0 0 0 3.1004-.3102 2.4664 2.4663 0 0 0 0-3.4875 2.4664 2.4663 0 0 0 -1.397-.6974 2.4664 2.4663 0 0 0 -.69561-1.3971 2.4664 2.4663 0 0 0 -1.7072-.7205z"
+     fill="#a5b7f3"
+     id="path9"
+     style="stroke:#a5b7f3;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+     transform="translate(0 -1036.4)" />
+</svg>
