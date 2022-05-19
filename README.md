@@ -1,6 +1,7 @@
 Godot plugin in GDScript for importing Moho animations.
 
 It imports .mohoproj files and converts it into a single scene. This plugin also adds two classes from Moho that may be useful besides importation: SwitchLayer and SmartBone.
+
 It was coded by me, [jp durigan](https://github.com/jpdurigan), with some help from [Daniel Porto](https://github.com/eh-jogos) and [Eduardo Wahrhaftig](https://www.behance.net/eduardow).
 
 ![Example of usage in game](https://github.com/jpdurigan/godot_moho_importer/blob/main/example.gif "Example of usage in game")
