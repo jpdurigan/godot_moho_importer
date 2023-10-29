@@ -24,7 +24,7 @@ enum MaskMode {
 const LIGHT_MASK_DEFAULT_LAYER = 1
 
 const MASKED_MATERIAL = \
-	preload("res://addons/jpd.moho_importer/components/canvas_item_light_only_material.tres")
+	preload("res://addons/jp_moho_importer/components/canvas_item_light_only_material.tres")
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 

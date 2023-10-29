@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/godot-icon.png-2dc02be4c5edecba549578fbce8eb798.stex"
+path="res://.import/godot-icon.png-9db151af35ba9aa8bdf169443272fdfa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/jpd.moho_importer/components/godot-icon.png"
-dest_files=[ "res://.import/godot-icon.png-2dc02be4c5edecba549578fbce8eb798.stex" ]
+source_file="res://addons/jp_moho_importer/components/godot-icon.png"
+dest_files=[ "res://.import/godot-icon.png-9db151af35ba9aa8bdf169443272fdfa.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

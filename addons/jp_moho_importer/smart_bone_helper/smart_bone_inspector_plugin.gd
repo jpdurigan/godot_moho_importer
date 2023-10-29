@@ -1,5 +1,4 @@
 # Write your doc string for this file here
-tool
 extends EditorInspectorPlugin
 
 ### Member Variables and Dependencies -------------------------------------------------------------
@@ -9,7 +8,7 @@ extends EditorInspectorPlugin
 
 #--- constants ------------------------------------------------------------------------------------
 
-const UI_PLUGIN_SCENE = preload("res://addons/jpd.moho_importer/fix_interpolation/FixInterpolation.tscn")
+const SMART_BONE_HELPER = preload("res://addons/jp_moho_importer/smart_bone_helper/SmartBoneHelper.tscn")
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
@@ -21,14 +20,14 @@ const UI_PLUGIN_SCENE = preload("res://addons/jpd.moho_importer/fix_interpolatio
 ### Built in Engine Methods -----------------------------------------------------------------------
 
 func can_handle(object: Object) -> bool:
-	var can_handle : bool = object is AnimationTree and not object.anim_player.is_empty()
+	var can_handle := object is SmartBone
 	return can_handle
 
 
 func parse_begin(object: Object) -> void:
-	var inspector_control = UI_PLUGIN_SCENE.instance()
+	var inspector_control = SMART_BONE_HELPER.instance()
 	add_custom_control(inspector_control)
-	inspector_control.animation_tree = object
+	inspector_control.smart_bone = object
 
 ### -----------------------------------------------------------------------------------------------
 

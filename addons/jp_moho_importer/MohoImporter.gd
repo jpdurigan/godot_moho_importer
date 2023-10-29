@@ -12,7 +12,7 @@ enum Presets { DEFAULT, NPC }
 
 #--- constants ------------------------------------------------------------------------------------
 
-const MohoSkeletonBaseScene = preload("res://addons/jpd.moho_importer/components/MohoSkeletonBaseScene.tscn")
+const MohoSkeletonBaseScene = preload("res://addons/jp_moho_importer/components/MohoSkeletonBaseScene.tscn")
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
@@ -26,7 +26,7 @@ var editor_plugin : EditorPlugin
 ### Built in Engine Methods -----------------------------------------------------------------------
 
 func get_importer_name() -> String:
-	return "jpd.moho_importer"
+	return "jp_moho_importer"
 
 
 func get_visible_name() -> String:

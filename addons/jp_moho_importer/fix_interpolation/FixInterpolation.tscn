@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://addons/jpd.moho_importer/components/moho_inspector_plugin_theme.tres" type="Theme" id=1]
-[ext_resource path="res://addons/jpd.moho_importer/fix_interpolation/FixInterpolation.gd" type="Script" id=2]
+[ext_resource path="res://addons/jp_moho_importer/components/moho_inspector_plugin_theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/jp_moho_importer/fix_interpolation/FixInterpolation.gd" type="Script" id=2]
 
 [node name="FixInterpolation" type="PanelContainer"]
 anchor_right = 1.0

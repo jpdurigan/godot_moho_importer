@@ -56,7 +56,7 @@ const EASE = {
 # tracks (this is mandatory for bezier tracks and when position is animated by more than one track).
 const TYPE_EXCEPTIONS = ["Vec2", "Vec3"]
 
-const SmartBoneAction = "res://addons/jpd.moho_importer/classes/smart_bones/SmartBoneAction.gd"
+const SmartBoneAction = "res://addons/jp_moho_importer/classes/smart_bones/SmartBoneAction.gd"
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 

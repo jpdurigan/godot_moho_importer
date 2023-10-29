@@ -12,7 +12,7 @@ extends Node
 
 #--- constants ------------------------------------------------------------------------------------
 
-const ICON_PLACEHOLDER_PATH = "res://addons/jpd.moho_importer/components/godot-icon.png"
+const ICON_PLACEHOLDER_PATH = "res://addons/jp_moho_importer/components/godot-icon.png"
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 

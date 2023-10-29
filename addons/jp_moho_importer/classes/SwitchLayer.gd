@@ -1,6 +1,6 @@
 # A Node2D that sets as visible only one of its children (they must inherit from CanvasItem).
 tool
-class_name SwitchLayer, "res://addons/jpd.moho_importer/components/icon_switch_layer.svg"
+class_name SwitchLayer, "res://addons/jp_moho_importer/components/icon_switch_layer.svg"
 extends Node2D
 
 ### Member Variables and Dependencies -------------------------------------------------------------

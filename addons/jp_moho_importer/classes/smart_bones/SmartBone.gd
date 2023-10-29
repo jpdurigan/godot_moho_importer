@@ -4,7 +4,7 @@
 # work, there must be a AnimationPlayer node with the action name as a child of the SmartBone.
 # You can also use a SmartBone to animate bone scaling and flipping.
 tool
-class_name SmartBone, "res://addons/jpd.moho_importer/components/icon_smart_bone.svg"
+class_name SmartBone, "res://addons/jp_moho_importer/components/icon_smart_bone.svg"
 extends Bone2D
 
 ### Member Variables and Dependencies -------------------------------------------------------------
@@ -14,7 +14,7 @@ extends Bone2D
 
 #--- constants ------------------------------------------------------------------------------------
 
-const DEBUG_FONT = preload("res://addons/jpd.moho_importer/components/opensans_regular_12pt.tres")
+const DEBUG_FONT = preload("res://addons/jp_moho_importer/components/opensans_regular_12pt.tres")
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 

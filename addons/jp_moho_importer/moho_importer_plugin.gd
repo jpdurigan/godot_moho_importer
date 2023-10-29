@@ -15,14 +15,14 @@ extends EditorPlugin
 
 #--- constants ------------------------------------------------------------------------------------
 
-const MOHO_IMPORTER = preload("res://addons/jpd.moho_importer/MohoImporter.gd")
+const MOHO_IMPORTER = preload("res://addons/jp_moho_importer/MohoImporter.gd")
 
 const IK_BAKE_PLUGIN = \
-		preload("res://addons/jpd.moho_importer/ik_bake_plugin/ik_bake_inspector_plugin.gd")
+		preload("res://addons/jp_moho_importer/ik_bake_plugin/ik_bake_inspector_plugin.gd")
 const SMART_BONE_PLUGIN = \
-		preload("res://addons/jpd.moho_importer/smart_bone_helper/smart_bone_inspector_plugin.gd")
+		preload("res://addons/jp_moho_importer/smart_bone_helper/smart_bone_inspector_plugin.gd")
 const FIX_INTERPOLATION_PLUGIN = \
-		preload("res://addons/jpd.moho_importer/fix_interpolation/fix_interpolation_plugin.gd")
+		preload("res://addons/jp_moho_importer/fix_interpolation/fix_interpolation_plugin.gd")
 const INSPECTOR_PLUGINS = {
 	_ik_bake_plugin = IK_BAKE_PLUGIN,
 	_smart_bone_plugin = SMART_BONE_PLUGIN,

@@ -1,6 +1,6 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://addons/jpd.moho_importer/components/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://addons/jp_moho_importer/components/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
 size = 12
