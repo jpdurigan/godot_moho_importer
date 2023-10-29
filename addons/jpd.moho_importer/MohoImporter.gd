@@ -8,7 +8,7 @@ extends EditorImportPlugin
 
 #--- enums ----------------------------------------------------------------------------------------
 
-enum Presets { DEFAULT, ALIQUEST_NPC }
+enum Presets { DEFAULT, NPC }
 
 #--- constants ------------------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ func get_preset_name(preset: int) -> String:
 	match preset:
 		Presets.DEFAULT:
 			preset_name = "Default"
-		Presets.ALIQUEST_NPC:
+		Presets.NPC:
 			preset_name = "Aliquest NPC"
 	
 	return preset_name
@@ -67,7 +67,7 @@ func get_import_options(preset: int) -> Array:
 	match preset:
 		Presets.DEFAULT:
 			options.append_array(_get_import_options())
-		Presets.ALIQUEST_NPC:
+		Presets.NPC:
 			options.append_array(_get_import_options(true, "", 1, "Counter_Clockwise"))
 	
 	return options
