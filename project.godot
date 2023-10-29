@@ -12,77 +12,77 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "IKBakeHelper",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/ik_bake_plugin/IkBakeHelper.gd"
+"path": "res://addons/jp_moho_importer/ik_bake_plugin/IkBakeHelper.gd"
 }, {
-"base": "Reference",
+"base": "MohoRigElement",
 "class": "MohoBone",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoBone.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoBone.gd"
 }, {
-"base": "Reference",
+"base": "MohoRigElement",
 "class": "MohoGroup",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoGroup.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoGroup.gd"
 }, {
 "base": "Reference",
 "class": "MohoGroupMaskHelper",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/MohoGroupMaskHelper.gd"
+"path": "res://addons/jp_moho_importer/classes/MohoGroupMaskHelper.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "MohoProjectHelper",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/MohoProjectHelper.gd"
+"path": "res://addons/jp_moho_importer/classes/MohoProjectHelper.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "MohoRigElement",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoRigElement.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoRigElement.gd"
 }, {
-"base": "Reference",
+"base": "MohoRigElement",
 "class": "MohoSkeleton",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoSkeleton.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoSkeleton.gd"
 }, {
-"base": "Reference",
+"base": "MohoRigElement",
 "class": "MohoSprite",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoSprite.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoSprite.gd"
 }, {
-"base": "Reference",
+"base": "MohoRigElement",
 "class": "MohoSwitch",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/resources/MohoSwitch.gd"
+"path": "res://addons/jp_moho_importer/classes/resources/MohoSwitch.gd"
 }, {
-"base": "Reference",
+"base": "Node2D",
 "class": "Skeleton2DIK",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIK.gd"
+"path": "res://addons/jp_moho_importer/classes/skeleton2d_ik/Skeleton2DIK.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "Skeleton2DIKChain",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIKChain.gd"
+"path": "res://addons/jp_moho_importer/classes/skeleton2d_ik/Skeleton2DIKChain.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "Skeleton2DIKChainPoint",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/skeleton2d_ik/Skeleton2DIKChainPoint.gd"
+"path": "res://addons/jp_moho_importer/classes/skeleton2d_ik/Skeleton2DIKChainPoint.gd"
 }, {
-"base": "Reference",
+"base": "Bone2D",
 "class": "SmartBone",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/smart_bones/SmartBone.gd"
+"path": "res://addons/jp_moho_importer/classes/smart_bones/SmartBone.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "SmartBoneAction",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/smart_bones/SmartBoneAction.gd"
+"path": "res://addons/jp_moho_importer/classes/smart_bones/SmartBoneAction.gd"
 }, {
-"base": "Reference",
+"base": "Node2D",
 "class": "SwitchLayer",
 "language": "GDScript",
-"path": "res://addons/jpd.moho_importer/classes/SwitchLayer.gd"
+"path": "res://addons/jp_moho_importer/classes/SwitchLayer.gd"
 } ]
 _global_script_class_icons={
 "IKBakeHelper": "",
@@ -97,9 +97,9 @@ _global_script_class_icons={
 "Skeleton2DIK": "",
 "Skeleton2DIKChain": "",
 "Skeleton2DIKChainPoint": "",
-"SmartBone": "",
+"SmartBone": "res://addons/jp_moho_importer/components/icon_smart_bone.svg",
 "SmartBoneAction": "",
-"SwitchLayer": ""
+"SwitchLayer": "res://addons/jp_moho_importer/components/icon_switch_layer.svg"
 }
 
 [application]
@@ -109,7 +109,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/jpd.moho_importer/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/jp_moho_importer/plugin.cfg" )
 
 [physics]
 
