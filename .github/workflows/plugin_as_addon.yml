@@ -27,11 +27,10 @@ jobs:
 
       - name: Merge with origin branch
         run: |
-          git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
+          git merge ${{ env.origin_branch }} -m "merging branch ${{ env.origin_branch }}"
 
       - name: Remove unnecessary files
         run: |
-          git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
           git rm --cached $(git ls-files -i --exclude-standard -c)
-          git commit -m "removing unnecessary files for addon"
-          git push origin ${{ env.target_branch }}
+          git commit -m "removing unnecessary files"
+          git push ${{ env.target_branch }}
