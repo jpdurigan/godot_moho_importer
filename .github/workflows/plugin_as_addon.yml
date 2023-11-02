@@ -19,13 +19,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         ref: ${{ env.target_branch }}
 
     - name: Remove unnecessary files
       run: |
-        git pull origin ${{ env.origin_branch }}
         git merge ${{ env.origin_branch }}
         git rm --cached $(git ls-files -i --exclude-standard -c)
         git commit -m "remove unnecessary files for addon"
