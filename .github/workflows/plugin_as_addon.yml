@@ -8,9 +8,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -25,7 +22,7 @@ jobs:
 
     - name: Remove unnecessary files
       run: |
-        git merge ${{ env.origin_branch }}
+        git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
         git rm --cached $(git ls-files -i --exclude-standard -c)
-        git commit -m "remove unnecessary files for addon"
+        git commit -m "removing unnecessary files for addon"
         git push origin ${{ env.target_branch }}
