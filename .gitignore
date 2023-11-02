@@ -73,3 +73,15 @@ Temporary Items
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,godot,visualstudiocode
+
+
+# Godot Asset Library / Downloads ignore
+README.md
+LICENSE
+project.godot
+icon.png
+default_env.tres
+*.import
+
+# Project specific
+example.gif
