@@ -15,25 +15,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout to target branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: ${{ env.target_branch }}
-
-      - name: Config git user
-        run: |
+      - run:
+          echo "Configuring git"
           git config user.name github-actions
           git config user.email github-actions@github.com
           git config pull.rebase false
+          echo "Fetching from remote"
           git fetch
 
-      - name: Merge with origin branch
-        run: |
+          echo "Pulling branch ${{ env.origin_branch }}"
           git pull origin ${{ env.origin_branch }}
+          
+          echo "Merging with ${{ env.origin_branch }}"
           git merge ${{ env.origin_branch }} -m "merging branch origin/${{ env.origin_branch }}" --allow-unrelated-histories
 
-      - name: Remove unnecessary files
-        run: |
+          echo "Removing unnecessary files"
           git rm --cached $(git ls-files -i --exclude-standard -c)
           git commit -m "removing unnecessary files"
           git push origin ${{ env.target_branch }}
