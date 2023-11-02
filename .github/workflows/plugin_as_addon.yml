@@ -30,7 +30,7 @@ jobs:
       - name: Merge with origin branch
         run: |
           git pull origin ${{ env.origin_branch }}
-          git merge ${{ env.origin_branch }} -m "merging branch origin/${{ env.origin_branch }} --allow-unrelated-histories"
+          git merge ${{ env.origin_branch }} -m "merging branch origin/${{ env.origin_branch }}" --allow-unrelated-histories
 
       - name: Remove unnecessary files
         run: |
