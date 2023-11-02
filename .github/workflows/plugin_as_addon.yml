@@ -1,0 +1,32 @@
+name: Prepare plugin as add-on
+
+env:
+  origin_branch: main
+  target_branch: download
+
+on:
+  push:
+    branches:
+      - ${{ env.origin_branch }}
+  pull_request:
+    branches:
+      - ${{ env.origin_branch }}
+  workflow_dispatch:
+
+jobs:
+  remove-unnecessary-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ env.target_branch }}
+
+    - name: Remove unnecessary files
+      run: |
+        git pull origin ${{ env.origin_branch }}
+        git merge ${{ env.origin_branch }}
+        git rm --cached $(git ls-files -i --exclude-standard -c)
+        git commit -m "remove unnecessary files for addon"
+        git push origin ${{ env.target_branch }}
