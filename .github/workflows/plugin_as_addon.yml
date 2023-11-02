@@ -9,20 +9,29 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+    
 jobs:
-  remove-unnecessary-files:
+  plugin-as-addon:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ env.target_branch }}
+      - name: Checkout to target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.target_branch }}
 
-    - name: Remove unnecessary files
-      run: |
-        git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
-        git rm --cached $(git ls-files -i --exclude-standard -c)
-        git commit -m "removing unnecessary files for addon"
-        git push origin ${{ env.target_branch }}
+      - name: Config git user
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+      - name: Merge with origin branch
+        run: |
+          git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
+
+      - name: Remove unnecessary files
+        run: |
+          git merge origin ${{ env.origin_branch }} -m "merging branch origin/main"
+          git rm --cached $(git ls-files -i --exclude-standard -c)
+          git commit -m "removing unnecessary files for addon"
+          git push origin ${{ env.target_branch }}
