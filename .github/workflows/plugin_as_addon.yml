@@ -7,10 +7,10 @@ env:
 on:
   push:
     branches:
-      - ${{ env.origin_branch }}
+      - main
   pull_request:
     branches:
-      - ${{ env.origin_branch }}
+      - main
   workflow_dispatch:
 
 jobs:
