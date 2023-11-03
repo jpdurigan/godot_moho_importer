@@ -85,3 +85,5 @@ default_env.tres
 
 # Project specific
 example.gif
+.github/*
+.vscode/*
