@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout to origin branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.origin_branch }}
+      
       - name: Checkout to target branch
         uses: actions/checkout@v4
         with:
@@ -24,13 +29,10 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git config pull.rebase false
-          git fetch
 
       - name: Merge with origin branch
         run: |
-          git pull ${{ env.origin_branch }}
-          git merge ${{ env.origin_branch }} -m "merging branch ${{ env.origin_branch }}" --allow-unrelated-histories
+          git merge ${{ env.origin_branch }} -m "auto merging branch ${{ env.origin_branch }}" --allow-unrelated-histories
 
       - name: Remove unnecessary files
         run: |
