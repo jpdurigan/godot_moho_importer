@@ -73,3 +73,7 @@ Temporary Items
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,godot,visualstudiocode
+
+
+# Project specific
+!.vscode/update_download_branch.sh
