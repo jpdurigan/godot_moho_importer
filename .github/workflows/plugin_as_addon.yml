@@ -15,11 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout to origin branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.origin_branch }}
-      
       - name: Checkout to target branch
         uses: actions/checkout@v4
         with:
@@ -32,7 +27,7 @@ jobs:
 
       - name: Merge with origin branch
         run: |
-          git merge ${{ env.origin_branch }} -m "auto merging branch ${{ env.origin_branch }}" --allow-unrelated-histories
+          git merge origin/${{ env.origin_branch }} -m "auto merging branch origin/${{ env.origin_branch }}" --allow-unrelated-histories
 
       - name: Remove unnecessary files
         run: |
